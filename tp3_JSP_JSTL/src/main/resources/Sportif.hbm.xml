@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="http://www.hibernate.org/xsd/hibernate-mapping" package="com.tp.tp3_jsp_jstl">
+    <class name="sportif" table="sportif">
+        <id name="id" column="id">
+            <generator class="identity" />
+        </id>
+        <property name="code" column="code"/>
+        <property name="nom" column="nom" />
+        <property name="prenom" column="prenom" />
+        <property name="age" column="age"/>
+        <property name="sexe" column="sexe" />
+        <property name="pays" column="pays" />
+        <property name="discipline" column="disciplines" />
+    </class>
+</hibernate-mapping>

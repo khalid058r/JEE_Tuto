@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.tp.projetspringmvc.entities">
+<class name="Client" table="CLIENT">
+    <id name="code" column="ID">
+        <generator class="identity"></generator>
+    </id>
+    <property name="nom" column="nom"/>
+    <property name="prenom" column="prenom" />
+    <property name="age" column="age"/>
+    <property name="ville" column="ville" />
+</class>
+</hibernate-mapping>
