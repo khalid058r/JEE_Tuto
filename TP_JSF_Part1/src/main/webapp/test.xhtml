@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+
+<h:head>
+    <title>TP_JSF_ETUDIANT</title>
+</h:head>
+<h:body>
+    <h:form>
+        <h:inputText value="#{test.nom}" />
+        <h:inputText value="#{test.dateNaissance}">
+            <f:convertDateTime pattern="dd/MM/yyyy"/>
+        </h:inputText>
+
+        <br/>
+
+        <h:outputText value="#{test.nom}"/>
+        <h:outputText value="#{test.dateNaissance}">
+            <f:convertDateTime dateStyle="full" />
+        </h:outputText>
+
+    </h:form>
+
+        
+
+</h:body>
+</html>

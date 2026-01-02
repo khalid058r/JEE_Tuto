@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+
+<h:head>
+    <title>Affichage Étudiant</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+    <style>
+        body { background-color: #f8f9fa; }
+        /* Ajustement pour que la première colonne du tableau soit en gras */
+        .table-custom td:first-child { font-weight: bold; width: 40%; color: #495057; }
+    </style>
+</h:head>
+
+<h:body>
+
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+
+                <div class="card shadow-sm border-0">
+
+                    <div class="card-header bg-success text-white text-center py-3">
+                        <h4 class="mb-0">Informations Étudiant Validées</h4>
+                    </div>
+
+                    <div class="card-body p-0">
+                        <h:panelGrid columns="2" styleClass="table table-striped table-hover mb-0 table-custom">
+
+                            <h:outputText value="CNE :"/>
+                            <h:outputText value="#{etudiant.cne}" styleClass="text-dark"/>
+
+                            <h:outputText value="Nom :"/>
+                            <h:outputText value="#{etudiant.nom}" styleClass="text-uppercase"/>
+
+                            <h:outputText value="Prénom :"/>
+                            <h:outputText value="#{etudiant.prenom}" styleClass="text-capitalize"/>
+
+                            <h:outputText value="Ville :"/>
+                            <h:outputText value="#{etudiant.ville}"/>
+
+                            <h:outputText value="Date de naissance :"/>
+                            <h:outputText value="#{etudiant.dateNaissance}">
+                                <f:convertDateTime dateStyle="full" timeZone="UTC" locale="fr_FR"/>
+                            </h:outputText>
+
+                            <h:outputText value="Bourse :"/>
+                            <h:outputText value="#{etudiant.bourse}" styleClass="fw-bold text-success">
+                                <f:convertNumber type="currency" currencySymbol="DH"/>
+                            </h:outputText>
+
+                        </h:panelGrid>
+                    </div>
+
+                    <div class="card-footer bg-white text-end p-3">
+                        <h:form>
+                            <h:commandButton value="Retour" action="index"
+                                             styleClass="btn btn-secondary px-4"/>
+                        </h:form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</h:body>
+</html>
